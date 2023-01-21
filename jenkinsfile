@@ -6,19 +6,19 @@ node
     sh "ls -al"
     
     stage "2. install the packages"
-    sh "yum install -y httpd"
+    sh "yum install -y docker"
     
     stage "3.verify the packages installed or not"
-    sh "rpm -qa | grep httpd"
+    sh "rpm -qa | grep docker"
     
     stage "4. restart the services"
-    sh "systemctl restart httpd"
+    sh "systemctl restart docker"
     
     stage "5. enable the services"
-    sh "systemctl enable httpd"
+    sh "systemctl enable docker"
     
     stage "6. check the services status"
-    sh "systemctl status httpd"
+    sh "systemctl status docker"
     
     stage "7. view the date"
     sh "date"
